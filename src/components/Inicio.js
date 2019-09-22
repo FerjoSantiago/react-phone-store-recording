@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
 //import fondo from '../fondo.png';
 import '../App.css';
@@ -27,22 +27,25 @@ export default function Inicio() {
     }, [index])
 
     return (
-        <Fragment>
-            <div className="container py-5">
-                <div className="row">
+        <React.Fragment>
+            <div className="py-5">
+                <div className="container">
                     
-                    <div style={{ background: "black", width: "60vw", height: "60vh"}}>
-                        <Gallery 
-                            index={index}
-                            onRequestChange={i => {
-                                setIndex(i);
-                            }} 
-                        >
-                            {images.map(image  => (
-                                <GalleryImage  objectFit="contain" src={image}/>
-                            ))}  
-                        </Gallery>
+                    <div className="row">
+                        <div style={{ background: "black", width: "auto", height: "60vh"}}>
+                            <Gallery 
+                                index={index}
+                                onRequestChange={i => {
+                                    setIndex(i);
+                                }} 
+                            >
+                                {images.map(image  => (
+                                    <GalleryImage  objectFit="contain" src={image}/>
+                                ))}  
+                            </Gallery>
+                        </div>
                     </div>
+                  
                 
                     <hr className="mx-6 w-100"/>
 
@@ -58,17 +61,18 @@ export default function Inicio() {
                             Todo esto desde la comodidad de tu casa y teniendo una conexión
                             a internet podrás acceder desde tu computadora, 
                             tablet o celular y poder comprar uno de nuestros
-                            productos.
-                            
+                            productos.  
                         </p>
                     </div>
 
                     <hr className="mx-6 w-100"/>
-                    
+
                 </div>
             </div>
+
             <NavFooter/>
-         </Fragment>
+
+         </React.Fragment>
     
     )
 }

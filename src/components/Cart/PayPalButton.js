@@ -56,3 +56,4 @@ export default class MyApp extends React.Component {
 // Usuario de prueba -> sb-uu8ra172320@personal.example.com //  )&?iyv#A
 // ferjotulley@gmail.com // Ferjo117#
 // Para checar movimientos ->  sandbox.paypal.com
+// https://github.com/FerjoSantiago/react-phone-store-recording
